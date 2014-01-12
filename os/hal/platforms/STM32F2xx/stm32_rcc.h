@@ -1060,6 +1060,33 @@
  * @api
  */
 #define rccResetUSART6() rccResetAPB2(RCC_APB2RSTR_USART6RST)
+
+/**
+ * @brief   Enables the RNG peripheral clock.
+ * @note    The @p lp parameter is ignored in this family.
+ *
+ * @param[in] lp        low power enable flag
+ *
+ * @api
+ */
+#define rccEnableRNG(lp) rccEnableAHB2(RCC_AHB2ENR_RNGEN, lp)
+
+/**
+ * @brief   Disables the RNG peripheral clock.
+ * @note    The @p lp parameter is ignored in this family.
+ *
+ * @param[in] lp        low power enable flag
+ *
+ * @api
+ */
+#define rccDisableRNG(lp) rccDisableAHB2(RCC_AHB2ENR_RNGEN, lp)
+
+/**
+ * @brief   Resets the RNG peripheral.
+ *
+ * @api
+ */
+#define rccResetRNG() rccResetAHB2(RCC_AHB2RSTR_RNGRST)
 /** @} */
 
 /*===========================================================================*/
