@@ -49,6 +49,7 @@
 #include "gpt.h"
 #include "i2c.h"
 #include "icu.h"
+#include "iwdg.h"
 #include "mac.h"
 #include "pwm.h"
 #include "rng.h"
