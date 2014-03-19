@@ -126,6 +126,9 @@ void halInit(void) {
 #if HAL_USE_RNG || defined(__DOXYGEN__)
   rngInit();
 #endif
+#if HAL_USE_IWDG || defined(__DOXYGEN__)
+  iwdgInit();
+#endif
   /* Board specific initialization.*/
   boardInit();
 }
