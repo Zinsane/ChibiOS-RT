@@ -134,7 +134,7 @@ extern "C" {
   void rng_lld_init(void);
   void rng_lld_start(RNGDriver *rngp);
   void rng_lld_stop(RNGDriver *rngp);
-  uint32_t rng_lld_next(RNGDriver *rngp);
+  void rng_lld_generate(RNGDriver *rngp, uint8_t* buf, uint32_t buf_len);
 #ifdef __cplusplus
 }
 #endif
