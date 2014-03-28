@@ -36,6 +36,8 @@
 #ifndef _CHTHREADS_H_
 #define _CHTHREADS_H_
 
+#include <errno.h>
+
 /**
  * @name    Thread states
  * @{
