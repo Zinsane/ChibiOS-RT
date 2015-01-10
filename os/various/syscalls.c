@@ -143,7 +143,9 @@ caddr_t _sbrk_r(struct _reent *r, int incr)
 #if CH_USE_MEMCORE
   void *p;
 
-  chDbgCheck(incr > 0, "_sbrk_r");
+  if (incr <= 0) {
+    return (caddr_t)-1;
+  }
 
   (void)r;
   p = chCoreAlloc((size_t)incr);
